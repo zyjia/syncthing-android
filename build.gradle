@@ -81,6 +81,12 @@ android {
     }
 
     productFlavors {
+        arm64v8a {
+            versionCode Integer.parseInt("5" + defaultConfig.versionCode)
+            ndk {
+                abiFilter "arm64-v8a"
+            }
+        }
         x86 {
             versionCode Integer.parseInt("4" + defaultConfig.versionCode)
             ndk {
